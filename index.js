@@ -32,6 +32,7 @@ module.exports = function (src, opts, fn) {
     var ast = parse(src, opts);
     
     var result = {
+        ast: ast,
         chunks : src.split(''),
         toString : function () { return result.chunks.join('') },
         inspect : function () { return result.toString() }
